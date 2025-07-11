@@ -28,7 +28,7 @@ class bicoinDataExtractor:
 
             price_tag = soup.find("div", class_="YMlKec fxKbKc")
             if price_tag:
-                value_str = price_tag.text.replace("R$", "").replace(",", ".").strip()
+                value_str = price_tag.text.replace("R$", "").replace(".", "").replace(",", ".").strip()
                 value = float(value_str)
                 return {
                     "tagValue": "BRL",
